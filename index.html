@@ -1,467 +1,965 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+
+
+
 <head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   
+      <title>Hexo</title>
+  
 
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="default">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- load loadjs.js -->
+  <script src="/libs/loadjs/dist/loadjs.min.js"></script>
+
+
+<link rel="stylesheet" href="/libs/animate.css/animate.min.css">
+  <!-- load lightgallery -->
+<link rel="stylesheet" href="/css/lightgallery.css">
+<link rel="stylesheet" href="/libs/noty/lib/noty.css">
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/taurus.css">
+    
+        <link rel="stylesheet" href="/css/scheme-taurus/animations.css">
+    
+
+
+ 
+
+  <!-- load font awesome 5 -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <!-- load mathjax -->
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax//libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- load js-cookie -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/js/social-share.min.js"></script>
+    <script src="/js/theme.js"></script>
+
+  <!-- include cookie.js -->
   
   
-    <link rel="icon" href="/favicon.png">
+
+  <!-- include comment system code -->
   
+    <script src="//cdn1.lncld.net/static/js/3.6.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-SSH远程连接Ubuntu 传输文件" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/06/15/SSH远程连接Ubuntu 传输文件/" class="article-date">
-  <time datetime="2018-06-15T09:41:58.791Z" itemprop="datePublished">2018-06-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>两个Ubuntu系统都需要先安装openssh-client和openssh-server并且正常联网；然后启动ssh服务：  </p>
-<p>如果ubuntu系统中没有安装ssh程序，也可以使用下列命令进行安装： sudo apt-get install openssh-client </p>
-<p>sudo apt-get install openssh-server 安装好后ssh服务的启动和停止命令如下： 启动ssh服务：  #sudo /etc/init.d/ssh start   </p>
-<p>停止ssh服务：（需要终止服务时才用，经测试，已连接上的ssh服务用这条命令是无法终止的，但可以阻止新的连接，需要终止时请请关机哈哈、、、）  </p>
-<blockquote>
-<p>远程连接<br>ssh <a href="mailto:root@192.168.10.90" target="_blank" rel="noopener">root@192.168.10.90</a></p>
-</blockquote>
-<p>#sudo /etc/init.d/ssh stop 重启ssh服务：（一般不用） #sudo /etc/init.d/ssh restart </p>
-<p>1、从服务器上下载文件<br>scp username@servername:/path/filename /var/www/local_dir（本地目录）</p>
-<p> 例如scp <a href="mailto:root@192.168.0.101" target="_blank" rel="noopener">root@192.168.0.101</a>:/var/www/test.txt  把192.168.0.101上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）</p>
-<p>2、上传本地文件到服务器<br>scp /path/filename username@servername:/path   </p>
-<p>例如scp /var/www/test.php  <a href="mailto:root@192.168.0.101" target="_blank" rel="noopener">root@192.168.0.101</a>:/var/www/  把本机/var/www/目录下的test.php文件上传到192.168.0.101这台服务器上的/var/www/目录中</p>
-<p>3、从服务器下载整个目录<br>scp -r username@servername:/var/www/remote_dir/（远程目录） /var/www/local_dir（本地目录）</p>
-<p>例如:scp -r <a href="mailto:root@192.168.0.101" target="_blank" rel="noopener">root@192.168.0.101</a>:/var/www/test  /var/www/  </p>
-<p>4、上传目录到服务器<br>scp  -r local_dir username@servername:remote_dir<br>例如：scp -r test  <a href="mailto:root@192.168.0.101" target="_blank" rel="noopener">root@192.168.0.101</a>:/var/www/   把当前目录下的test目录上传到服务器的/var/www/ 目录</p>
+ 
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/15/SSH远程连接Ubuntu 传输文件/" data-id="cjifsbcqi00000ct1t2mpk4cq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+<header id="header" class='header'>
+	<div class="header-title">
+		
+		<div class='header-logo'>
+			<a href='/'>
+				<img src='/images/theme-icon.svg' />
+			</a>
+		</div>
+		<div class='header-text'>
+			<h1>
+				<a href="/">Hexo</a>
+			</h1>
+			<subtitle>
+				
+			</subtitle>
+		</div>
+		
+	</div>
+	<div id='header-nav'>
+		
 
 
-  
-    <article id="post-VS for Ubuntu install" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/06/15/VS for Ubuntu install/" class="article-date">
-  <time datetime="2018-06-15T09:41:58.791Z" itemprop="datePublished">2018-06-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Running VS Code on Linux<br>Installation<br>Debian and Ubuntu based distributions<br>The easiest way to install for Debian/Ubuntu based distributions is to download and install the .deb package (64-bit) either through the graphical software center if it’s available or through the command line with:</p>
-<p>sudo dpkg -i <file>.deb<br>sudo apt-get install -f # Install dependencies<br>Installing the .deb package will automatically install the apt repository and signing key to enable auto-updating using the regular system mechanism. Note that 32-bit and .tar.gz binaries are also available on the download page.</file></p>
-<p>The repository and key can also be installed manually with the following script:</p>
-<p>curl <a href="https://packages.microsoft.com/keys/microsoft.asc" target="_blank" rel="noopener">https://packages.microsoft.com/keys/microsoft.asc</a> | gpg –dearmor &gt; microsoft.gpg<br>sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg<br>sudo sh -c ‘echo “deb [arch=amd64] <a href="https://packages.microsoft.com/repos/vscode" target="_blank" rel="noopener">https://packages.microsoft.com/repos/vscode</a> stable main” &gt; /etc/apt/sources.list.d/vscode.list’<br>Then update the package cache and install the package using:</p>
-<p>sudo apt-get update<br>sudo apt-get install code # or code-insiders</p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/15/VS for Ubuntu install/" data-id="cjifsbcqn00010ct1zxtd8ru7" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-conda环境管理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/06/15/conda环境管理/" class="article-date">
-  <time datetime="2018-06-15T09:41:58.791Z" itemprop="datePublished">2018-06-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>conda常用命令</p>
-<p>查看当前系统下的环境</p>
-<p>conda info -e</p>
-<p>创建新的环境</p>
-<p>指定python版本为2.7，注意至少需要指定python版本或者要安装的包后一种情况下，自动安装最新python版本</p>
-<p>conda create -n env_name python=2.7</p>
-<p>同时安装必要的包</p>
-<p>conda create -n env_name numpy matplotlib python=2.7</p>
-<p>环境切换</p>
-<p>切换到新环境# linux/Mac下需要使用source activate env_name</p>
-<p>activate env_name</p>
-<p>#退出环境，也可以使用<code>activate root</code>切回root环境</p>
-<p>deactivate env_name</p>
-<p>移除环境</p>
-<p>conda remove -n env_name –all</p>
-<p>三、包管理</p>
-<p>给某个特定环境安装package有两个选择，一是切换到该环境下直接安装，二是安装时指定环境参数-n</p>
-<p>activate env_nameconda install pandas</p>
-<p>安装anaconda发行版中所有的包</p>
-<p>conda install anaconda</p>
-<p>conda install -n env_name pandas</p>
-<p>查看已经安装的package</p>
-<p>conda list 指定查看某环境下安装的package</p>
-<p>conda list -n env_name</p>
-<p>查找包</p>
-<p>conda search pyqtgraph</p>
-<p>更新包</p>
-<p>conda update numpy</p>
-<p>conda update anaconda</p>
-<p>卸载包</p>
-<p>conda remove numpy</p>
-<h1 id="Ubuntu-Linux-64-bit-CPU-only-Python-2-7"><a href="#Ubuntu-Linux-64-bit-CPU-only-Python-2-7" class="headerlink" title="Ubuntu/Linux 64-bit, CPU only, Python 2.7:"></a>Ubuntu/Linux 64-bit, CPU only, Python 2.7:</h1><p>(tensorflow)$ pip install –ignore-installed –upgrade <a href="https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.8.0rc0-cp27-none-linux_x86_64.whl" target="_blank" rel="noopener">https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.8.0rc0-cp27-none-linux_x86_64.whl</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/15/conda环境管理/" data-id="cjifsbcqp00020ct12nmfat3h" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-list merge" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/06/15/list merge/" class="article-date">
-  <time datetime="2018-06-15T09:41:58.791Z" itemprop="datePublished">2018-06-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>问题: 倘若存在 L=[ [1,2,3],[4,5,6],[7,8,9]] 这样的列表,如何把合并成[1,2,3,4,5,6,7,8,9]呢?</p>
-<p>最直接的方法(By:松林)<br>ret = []<br>for x in L:<br>    ret += x<br>print(x)</p>
-<p>使用标准库中的itertools模块(By:dokelung)<br>from itertools import chain<br>lst = list(chain(*L))<br>这种方法由标准库提供,显然是更有效率,更加简洁的.</p>
-<p>注: * 操作符是起到一个参数列表解包的作用</p>
-<p>有没有一种更加Pythonic的方法,但又不使用标准库?<br>答案是当然有,我们可以利用 List Comprehension 这个python中非常好用的技巧</p>
-<p>myList = [x for j in L for x in j]</p>
-<p>总结<br>三个解决方法中,方法1是最直接的方案, 方法2利用了已有的标准库,一般情况有更好的效率.</p>
-<p>方法3则是发挥Python的优点,毕竟Pythonic是每个Python程序员的目标,也是这个语言吸引人的地方.</p>
-<p>其实发这篇文章主要是顺带安利下Python, 一段Pythonic的代码具有很好的观赏性, Python也提供了很多Pythonic的特性.</p>
-<p>例如 上面提到的 LIst Comprehension 的方法来构造一个序列(列表,元组,字典), 其他语言要实现的话一般就要用lambda表达式,</p>
-<p>个人而言是排斥lambda表达式的, 可读性方面它不如直接定义函数,而且也缺少对称性的优美.</p>
-<p>再例如Python 的Slice(切片),也是一个很有用,很优美的技巧.</p>
-<p>最经典的字符串反转, python可以这样写</p>
-<p>s = “Hello, World!”<br>print(s[::-1]) # 具体解释可以看python文档,这里利用的是使步长为-1<br>间隔抽样可以这样写</p>
-<p>L = [1,2,3,4,5……..]<br>print(L[::3]) #3 为步进长度,可以取出1,4,7….</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/15/list merge/" data-id="cjifsbcqq00030ct1mbt6psyu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-opencv install" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/06/15/opencv install/" class="article-date">
-  <time datetime="2018-06-15T09:41:58.791Z" itemprop="datePublished">2018-06-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>conda install -c menpo opencv3=3.2.0</p>
-<p><a href="https://www.cnblogs.com/arkenstone/p/6490017.html" target="_blank" rel="noopener">https://www.cnblogs.com/arkenstone/p/6490017.html</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/15/opencv install/" data-id="cjifsbcqr00040ct1885epdd9" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-python Nan空值" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/06/15/python Nan空值/" class="article-date">
-  <time datetime="2018-06-15T09:41:58.791Z" itemprop="datePublished">2018-06-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-         <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if aim_row is not np.nan:</span><br><span class="line">       print(aim_row)</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/15/python Nan空值/" data-id="cjifsbcqs00050ct1gvbdc8tx" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-win文件解压到linux乱码问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/06/15/win文件解压到linux乱码问题/" class="article-date">
-  <time datetime="2018-06-15T09:41:58.791Z" itemprop="datePublished">2018-06-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>有2种方式解决问题：</p>
-<ol>
-<li><p>通过unzip行命令解压，指定字符集<br>unzip -O CP936 xxx.zip (用GBK, GB18030也可以)<br>有趣的是unzip的manual中并无这个选项的说明, unzip –help对这个参数有一行简单的说明。</p>
-</li>
-<li><p>在环境变量中，指定unzip参数，总是以指定的字符集显示和解压文件<br>/etc/environment中加入2行<br>UNZIP=”-O CP936”<br>ZIPINFO=”-O CP936”<br>这样Gnome桌面的归档文件管理器(file-roller)可以正常使用unzip解压中文，但是file-roller本身并不能设置编码传递给unzip。</p>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/15/win文件解压到linux乱码问题/" data-id="cjifsbcqt00060ct1hfuuaygp" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-search file" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/06/15/search file/" class="article-date">
-  <time datetime="2018-06-15T09:41:58.791Z" itemprop="datePublished">2018-06-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一.以文件名查找： </p>
-<ol>
-<li>find 命令 </li>
-</ol>
-<p>由于find具有强大的功能，所以它的选项也很多，其中大部分选项都值得我们花时间来了解一下。即使系统中含有网络文件系统( NFS)，find命令在该文件系统中同样有效，只你具有相应的权限。<br>在运行一个非常消耗资源的find命令时，很多人都倾向于把它放在后台执行，因为遍历一个大的文件系统可能会花费很长的时间(这里是指30G字节以上的文件系统)。<br>find命令的一般形式为；<br>find pathname -options [-print -exec -ok …]<br>如<br>find / -name “filename”<br>目的：在根目录“/”开始搜被称为filename的文件，“filename”文件名可以包含通配符（*，？），注意：filename是文件名字符串，可以带双引号，也可不带find命令功能强大，它有很多选项让你以不同的方式搜索文件，例如，通过日期，文件大小，权限，拥有者等等。<br>find命令的参数；<br>pathname: find命令所查找的目录路径。例如用.来表示当前目录，用/来表示系统根目录。<br>-print： find命令将匹配的文件输出到标准输出。<br>-exec： find命令对匹配的文件执行该参数所给出的shell命令。相应命令的形式为’command’ { } ;，注意{ }和；之间的空格。<br>-ok： 和-exec的作用相同，只不过以一种更为安全的模式来执行该参数所给出的shell命令，在执行每一个命令之前，都会给出提示，让用户来确定是否执行。 </p>
-<p>3、find命令选项 </p>
-<p>-name<br>按照文件名查找文件。<br>-perm<br>按照文件权限来查找文件。<br>-prune<br>使用这一选项可以使find命令不在当前指定的目录中查找，如果同时使用-depth选项，那么-prune将被find命令忽略。<br>-user<br>按照文件属主来查找文件。<br>-group<br>按照文件所属的组来查找文件。<br>-mtime -n +n<br>按照文件的更改时间来查找文件， - n表示文件更改时间距现在n天以内，+ n表示文件更改时间距现在n天以前。find命令还有-atime和-ctime 选项，但它们都和-m time选项。<br>-nogroup<br>查找无有效所属组的文件，即该文件所属的组在/etc/groups中不存在。<br>-nouser<br>查找无有效属主的文件，即该文件的属主在/etc/passwd中不存在。<br>-newer file1 ! file2<br>查找更改时间比文件file1新但比文件file2旧的文件。<br>-type<br>查找某一类型的文件，诸如：<br>b - 块设备文件。<br>d - 目录。<br>c - 字符设备文件。<br>p - 管道文件。<br>l - 符号链接文件。<br>f - 普通文件。<br>-size n：[c] 查找文件长度为n块的文件，带有c时表示文件长度以字节计。<br>-depth：在查找文件时，首先查找当前目录中的文件，然后再在其子目录中查找。<br>-fstype：查找位于某一类型文件系统中的文件，这些文件系统类型通常可以在配置文件/etc/fstab中找到，该配置文件中包含了本系统中有关文件系统的信息。<br>-mount：在查找文件时不跨越文件系统mount点。<br>-follow：如果find命令遇到符号链接文件，就跟踪至链接所指向的文件。<br>-cpio：对匹配的文件使用cpio命令，将这些文件备份到磁带设备中。 </p>
-<ol start="2">
-<li>locate 命令 </li>
-</ol>
-<p>locate filename<br>locate命令其实是“find -name”的另一种写法，但是要比后者快得多，原因在于它不搜索具体目录，而是搜索一个数据库（/var/lib/locatedb），这个数据库中含有本地所有文件信息。Linux系统自动创建这个数据库，并且每天自动更新一次，所以使用locate命令查不到最新变动过的文件。为了避免这种情况，可以在使用locate之前，先使用updatedb命令，手动更新数据库。<br>locate命令的使用实例：<br>　　$ locate /etc/sh<br>搜索etc目录下所有以sh开头的文件。<br>　　$ locate ~/m<br>搜索用户主目录下，所有以m开头的文件。<br>　　$ locate -i ~/m<br>搜索用户主目录下，所有以m开头的文件，并且忽略大小写。 </p>
-<p>发现包含字符串“filename”的文件名。这比find命令更容易。但是基于数据库（通常在夜间重建），所以你无法找到刚刚存到文件系统的文件。为了强制立即更新数据库，作为超级用户可以使用：updatedb&amp; （中间没有空格） </p>
-<ol start="3">
-<li>which命令 </li>
-</ol>
-<p>which executeable_name<br>查找可执行文件，根据可执行文件的文件名。<br>例如 which apache2 ， 返回/usr/sbin/apache2 </p>
-<p>二.以文件内容查找 </p>
-<ol>
-<li>grep -n 字符串名字 /filepath/filename<br>返回包含该字符串的该行，可以是多行。且包含行数。 </li>
-<li>sudo gedit /filepath/filename<br>而后，用ctrl+F 去查找相应的字符串。 </li>
-<li>vi或者less命令可以查找相应的内容<br>例如 vi /filepath/filename而后，输入 “/字符串” ，按下字母“n”到下一个匹配的字符串 </li>
-<li>tail命令 </li>
-</ol>
-<p>查看文件内容的特殊方法</p>
-<ol>
-<li>如果你只想看文件的前5行，可以使用head命令，如：<br>head -5 /etc/passwd </li>
-<li>如果你想查看文件的后10行，可以使用tail命令，如：<br>tail -20 /etc/passwd<br>tail -f /var/log/messages<br>参数-f使tail不停地去读最新的内容，这样有实时监视的效果<br>tail -f /var/log/messages<br>按Ctrl+C后，直接从脚本退出到提示符下了</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/15/search file/" data-id="cjifsbcqu00070ct1n2rljqj1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/06/15/SSH远程连接Ubuntu 传输文件/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/15/VS for Ubuntu install/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/15/conda环境管理/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/15/list merge/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/15/opencv install/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+		
+		
+	</div>
+	</div>
 </nav>
+
+	</div>
+</header>
+
+ 
+
+  
+
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div style="flex: 1;">
+      
+
+
+<div class="index-container" id='/index.html' data-name='index' data-version='2.0.13'>
+	<div class='index-intro'>
+		Bazinga, theme cutie!
+	</div>
+	
+		<div class="grid-2_md-1 grid-equalHeight index-cards">
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-1' id='hashit_8eaedc14878e08b6588741aa79f1a7745ee8c2595058d97b43275325433a2a85' data-name='' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2018/06/15/SSH远程连接Ubuntu 传输文件/">
+		
+		
+			<img class='grow' src="/images/uncategorized.svg" alt="" onerror='if (this.src != "/images/uncategorized.svg") this.src = "/images/uncategorized.svg"'>
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2018/06/15/SSH远程连接Ubuntu 传输文件/">
+				
+				No title</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2018/06/15/SSH远程连接Ubuntu 传输文件/">
+				
+				
+				
+				两个Ubuntu系统都需要先安装openssh-client和openssh-server并且正常联网；然后启动ssh服务：  
+如果ubuntu系统中没有安装ssh程序，也可以使用下列命令进行安装： sudo apt-get install openssh-client 
+sudo...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<div class='Card-tags'></div>
+				
+				<ul>
+						<li>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> 2018-06-15
+							</a>
+						</li>
+						
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-2' id='hashit_806012134fb4f3ef25bdd2e1042e6f62f9a8409eb891f5a3af4d7987b1bbbfec' data-name='' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2018/06/15/VS for Ubuntu install/">
+		
+		
+			<img class='grow' src="/images/uncategorized.svg" alt="" onerror='if (this.src != "/images/uncategorized.svg") this.src = "/images/uncategorized.svg"'>
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2018/06/15/VS for Ubuntu install/">
+				
+				No title</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2018/06/15/VS for Ubuntu install/">
+				
+				
+				
+				Running VS Code on LinuxInstallationDebian and Ubuntu based distributionsThe easiest way to install for Debian/Ubuntu based distributions is to...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<div class='Card-tags'></div>
+				
+				<ul>
+						<li>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> 2018-06-15
+							</a>
+						</li>
+						
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-3' id='hashit_80b11e6cd8ae097c24696c56322a62a742440f6b185cab54d9485a289b2447fc' data-name='' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2018/06/15/conda环境管理/">
+		
+		
+			<img class='grow' src="/images/uncategorized.svg" alt="" onerror='if (this.src != "/images/uncategorized.svg") this.src = "/images/uncategorized.svg"'>
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2018/06/15/conda环境管理/">
+				
+				No title</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2018/06/15/conda环境管理/">
+				
+				
+				
+				conda常用命令
+查看当前系统下的环境
+conda info -e
+创建新的环境
+指定python版本为2.7，注意至少需要指定python版本或者要安装的包后一种情况下，自动安装最新python版本
+conda create -n env_name...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<div class='Card-tags'></div>
+				
+				<ul>
+						<li>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> 2018-06-15
+							</a>
+						</li>
+						
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-4' id='hashit_2ca91c28ef91bf896fd47b75b9fabc0ebbca309daa0a9173bf1c8c4cb7f45f59' data-name='' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2018/06/15/list merge/">
+		
+		
+			<img class='grow' src="/images/uncategorized.svg" alt="" onerror='if (this.src != "/images/uncategorized.svg") this.src = "/images/uncategorized.svg"'>
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2018/06/15/list merge/">
+				
+				No title</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2018/06/15/list merge/">
+				
+				
+				
+				问题: 倘若存在 L=[ [1,2,3],[4,5,6],[7,8,9]] 这样的列表,如何把合并成[1,2,3,4,5,6,7,8,9]呢?
+最直接的方法(By:松林)ret = []for x in L:    ret +=...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<div class='Card-tags'></div>
+				
+				<ul>
+						<li>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> 2018-06-15
+							</a>
+						</li>
+						
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-5' id='hashit_e9d333094a9f230c63ee666525caf8443e1c1d44552db6ef9daf3196029c048b' data-name='' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2018/06/15/opencv install/">
+		
+		
+			<img class='grow' src="/images/uncategorized.svg" alt="" onerror='if (this.src != "/images/uncategorized.svg") this.src = "/images/uncategorized.svg"'>
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2018/06/15/opencv install/">
+				
+				No title</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2018/06/15/opencv install/">
+				
+				
+				
+				conda install -c menpo opencv3=3.2.0
+https://www.cnblogs.com/arkenstone/p/6490017.html
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<div class='Card-tags'></div>
+				
+				<ul>
+						<li>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> 2018-06-15
+							</a>
+						</li>
+						
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-6' id='hashit_a9b7ef9b504a80242ad7a7721a326a7eef0e75c328385ba678567ab946401c54' data-name='' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2018/06/15/python Nan空值/">
+		
+		
+			<img class='grow' src="/images/uncategorized.svg" alt="" onerror='if (this.src != "/images/uncategorized.svg") this.src = "/images/uncategorized.svg"'>
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2018/06/15/python Nan空值/">
+				
+				No title</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2018/06/15/python Nan空值/">
+				
+				
+				
+				12if aim_row is not np.nan:       print(aim_row)
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<div class='Card-tags'></div>
+				
+				<ul>
+						<li>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> 2018-06-15
+							</a>
+						</li>
+						
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-7' id='hashit_ed4bffcad7942ef85f173ae5abdb6af8cbb2d28f0ea9d2da2190ead275d10cb6' data-name='' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2018/06/15/search file/">
+		
+		
+			<img class='grow' src="/images/uncategorized.svg" alt="" onerror='if (this.src != "/images/uncategorized.svg") this.src = "/images/uncategorized.svg"'>
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2018/06/15/search file/">
+				
+				No title</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2018/06/15/search file/">
+				
+				
+				
+				一.以文件名查找： 
+
+find 命令 
+
+由于find具有强大的功能，所以它的选项也很多，其中大部分选项都值得我们花时间来了解一下。即使系统中含有网络文件系统(...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<div class='Card-tags'></div>
+				
+				<ul>
+						<li>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> 2018-06-15
+							</a>
+						</li>
+						
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-8' id='hashit_ac3a3075b6ce7fdb5b2d0e17a43fba664119caa8ec6586a7b0d01a85861e8993' data-name='' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2018/06/15/win文件解压到linux乱码问题/">
+		
+		
+			<img class='grow' src="/images/uncategorized.svg" alt="" onerror='if (this.src != "/images/uncategorized.svg") this.src = "/images/uncategorized.svg"'>
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2018/06/15/win文件解压到linux乱码问题/">
+				
+				No title</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2018/06/15/win文件解压到linux乱码问题/">
+				
+				
+				
+				有2种方式解决问题：
+
+通过unzip行命令解压，指定字符集unzip -O CP936 xxx.zip (用GBK, GB18030也可以)有趣的是unzip的manual中并无这个选项的说明, unzip...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<div class='Card-tags'></div>
+				
+				<ul>
+						<li>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> 2018-06-15
+							</a>
+						</li>
+						
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+		</div>
+	
+	<br>
+	
+	<div class='pagination'>
+	
+	
+	
+		<div class="pagination-item">
+			
+			
+				<span>1</span>
+			
+		</div>
+	
+
+	
+</div>
+</div>
+  </div>
+
+  
+
+<footer id='footer'>
+    <div class='footer-copyright'>
+        <div>
+            <p> Copyright by <a href="">John Doe </a> @ 2018</p>
+            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> and <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; Theme: <a href="https://qutang.github.io/cutie/">Cutie 2.0.13-Taurus</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
+        </div>
+    </div>
+    
+    <div class='footer-social'>
+        
+    </div>
+</footer>
+
+  <br>
+
+  <div id="footer-nav" class='footer-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+		
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+
+  
+
+
+
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
 
 
 
-  </div>
+
+
+
+    <script src="/js/lightgallery.min.js"></script>
+<script src="/js/lg-zoom.min.js"></script>
+<script type='text/javascript'>
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+        $(".article-content img").each(function(){
+            console.log($(this).attr('src'))
+            $(this).attr('data-src', $(this).attr('src')).lightGallery({
+                selector: 'this'
+            })
+        });
+    });
+</script>
+
+
+
+
+
+
+<script type='text/javascript'>
+
+  
+    loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
+    loadjs.ready('post-version', {
+      success: function(){
+        console.log('ready to run badge script')
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_8eaedc14878e08b6588741aa79f1a7745ee8c2595058d97b43275325433a2a85 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_806012134fb4f3ef25bdd2e1042e6f62f9a8409eb891f5a3af4d7987b1bbbfec mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_80b11e6cd8ae097c24696c56322a62a742440f6b185cab54d9485a289b2447fc mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_2ca91c28ef91bf896fd47b75b9fabc0ebbca309daa0a9173bf1c8c4cb7f45f59 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_e9d333094a9f230c63ee666525caf8443e1c1d44552db6ef9daf3196029c048b mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_a9b7ef9b504a80242ad7a7721a326a7eef0e75c328385ba678567ab946401c54 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_ed4bffcad7942ef85f173ae5abdb6af8cbb2d28f0ea9d2da2190ead275d10cb6 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_ac3a3075b6ce7fdb5b2d0e17a43fba664119caa8ec6586a7b0d01a85861e8993 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+      }
+    })
+  
+</script>
+
+
+
+<!-- <script src="/js/post.js"></script> -->
+
+<script src="/js/headroom.min.js"></script>
+
+<script data-no-instant type='text/javascript'>
+
+initHeadroom();
+
+changeLayoutOnTouchScreen();
+
+// 
+// var post = new Post('', '');
+// console.log(post);
+// $('.Card').each(function(){
+//     var post_url = $(this).attr('id');
+//     var true_url = $(this).find('.Card-title a').first().attr('href');
+//     var card = this;
+//     post.getCommentCount(post_url, function(count){
+//         $(card).find('.card-comment-count').first().text(count);
+//     });
+//     post.getVisitCount(post_url, function(count){
+//         $(card).find('.card-visit-count').first().text(count);
+//     });
+    
+// });
+
+// 
+</script>
+
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>

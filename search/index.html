@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  
+      <title>Search - Hexo</title>
+  
+
+  
+  
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- load loadjs.js -->
+  <script src="/libs/loadjs/dist/loadjs.min.js"></script>
+
+
+<link rel="stylesheet" href="/libs/animate.css/animate.min.css">
+  <!-- load lightgallery -->
+<link rel="stylesheet" href="/css/lightgallery.css">
+<link rel="stylesheet" href="/libs/noty/lib/noty.css">
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/taurus.css">
+    
+        <link rel="stylesheet" href="/css/scheme-taurus/animations.css">
+    
+
+
+ 
+
+  <!-- load font awesome 5 -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <!-- load mathjax -->
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax//libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- load js-cookie -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/js/social-share.min.js"></script>
+    <script src="/js/theme.js"></script>
+
+  <!-- include cookie.js -->
+  
+  
+
+  <!-- include comment system code -->
+  
+    <script src="//cdn1.lncld.net/static/js/3.6.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+ 
+
+<header id="header" class='header'>
+	<div class="header-title">
+		
+		<div class='header-logo'>
+			<a href='/'>
+				<img src='/images/theme-icon.svg' />
+			</a>
+		</div>
+		<div class='header-text'>
+			<h1>
+				<a href="/">Hexo</a>
+			</h1>
+			<subtitle>
+				
+			</subtitle>
+		</div>
+		
+	</div>
+	<div id='header-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon active_dot'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+		
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+</header>
+
+ 
+
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div style="flex: 1;">
+      <div class='search-container'>
+	<input type="text" id='search-form'>
+
+	<ul class="cat-list">
+		
+	</ul>
+
+	<div class="archive-cards">
+			<div class='Card-archive' style='display:none'>
+				<div class="Card-body">
+					<h3 class='Card-title'>
+						<a>
+						</a>
+					</h3>
+					<div class="Card-meta">
+						<ul>
+							<li><i class='fa fa-calendar'></i> <span class='Card-date'></span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+<script src="/libs/fuse.js/dist/fuse.min.js"></script>
+<script>
+	var options = {
+		shouldSort: true,
+		threshold: 0.4,
+		tokenize: true,
+		location: 0,
+		distance: 100,
+		maxPatternLength: 32,
+		minMatchCharLength: 2,
+		keys: [
+			"title",
+			"author",
+			"tags"
+		]
+	};
+	var s = '[{"title":"","date":"2018-06-15T09:41:58.791Z","content":"两个Ubuntu系统都需要先安装openssh-client和openssh-server并且正常联网；然后启动ssh服务：  \n如果ubuntu系统中没有安装ssh程序，也可以使用下列命令进行安装： sudo apt-get install openssh-client \nsudo apt-get install openssh-server 安装好后ssh服务的启动和停止命令如下： 启动ssh服务：  #sudo /etc/init.d/ssh start   \n停止ssh服务：（需要终止服务时才用，经测试，已连接上的ssh服务用这条命令是无法终止的，但可以阻止新的连接，需要终止时请请关机哈哈、、、）  \n\n远程连接ssh root@192.168.10.90\n\n#sudo /etc/init.d/ssh stop 重启ssh服务：（一般不用） #sudo /etc/init.d/ssh restart \n1、从服务器上下载文件scp username@servername:/path/filename /var/www/local_dir（本地目录）\n 例如scp root@192.168.0.101:/var/www/test.txt  把192.168.0.101上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）\n2、上传本地文件到服务器scp /path/filename username@servername:/path   \n例如scp /var/www/test.php  root@192.168.0.101:/var/www/  把本机/var/www/目录下的test.php文件上传到192.168.0.101这台服务器上的/var/www/目录中\n3、从服务器下载整个目录scp -r username@servername:/var/www/remote_dir/（远程目录） /var/www/local_dir（本地目录）\n例如:scp -r root@192.168.0.101:/var/www/test  /var/www/  \n4、上传目录到服务器scp  -r local_dir username@servername:remote_dir例如：scp -r test  root@192.168.0.101:/var/www/   把当前目录下的test目录上传到服务器的/var/www/ 目录\n","tags":[],"path":"2018/06/15/SSH远程连接Ubuntu 传输文件/","external_link":""},{"title":"","date":"2018-06-15T09:41:58.791Z","content":"Running VS Code on LinuxInstallationDebian and Ubuntu based distributionsThe easiest way to install for Debian/Ubuntu based distributions is to download and install the .deb package (64-bit) either through the graphical software center if it’s available or through the command line with:\nsudo dpkg -i .debsudo apt-get install -f # Install dependenciesInstalling the .deb package will automatically install the apt repository and signing key to enable auto-updating using the regular system mechanism. Note that 32-bit and .tar.gz binaries are also available on the download page.\nThe repository and key can also be installed manually with the following script:\ncurl https://packages.microsoft.com/keys/microsoft.asc | gpg –dearmor &gt; microsoft.gpgsudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpgsudo sh -c ‘echo “deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main” &gt; /etc/apt/sources.list.d/vscode.list’Then update the package cache and install the package using:\nsudo apt-get updatesudo apt-get install code # or code-insiders\n","tags":[],"path":"2018/06/15/VS for Ubuntu install/","external_link":""},{"title":"","date":"2018-06-15T09:41:58.791Z","content":"conda常用命令\n查看当前系统下的环境\nconda info -e\n创建新的环境\n指定python版本为2.7，注意至少需要指定python版本或者要安装的包后一种情况下，自动安装最新python版本\nconda create -n env_name python=2.7\n同时安装必要的包\nconda create -n env_name numpy matplotlib python=2.7\n环境切换\n切换到新环境# linux/Mac下需要使用source activate env_name\nactivate env_name\n#退出环境，也可以使用activate root切回root环境\ndeactivate env_name\n移除环境\nconda remove -n env_name –all\n三、包管理\n给某个特定环境安装package有两个选择，一是切换到该环境下直接安装，二是安装时指定环境参数-n\nactivate env_nameconda install pandas\n安装anaconda发行版中所有的包\nconda install anaconda\nconda install -n env_name pandas\n查看已经安装的package\nconda list 指定查看某环境下安装的package\nconda list -n env_name\n查找包\nconda search pyqtgraph\n更新包\nconda update numpy\nconda update anaconda\n卸载包\nconda remove numpy\nUbuntu/Linux 64-bit, CPU only, Python 2.7:(tensorflow)$ pip install –ignore-installed –upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.8.0rc0-cp27-none-linux_x86_64.whl\n","tags":[],"path":"2018/06/15/conda环境管理/","external_link":""},{"title":"","date":"2018-06-15T09:41:58.791Z","content":"问题: 倘若存在 L=[ [1,2,3],[4,5,6],[7,8,9]] 这样的列表,如何把合并成[1,2,3,4,5,6,7,8,9]呢?\n最直接的方法(By:松林)ret = []for x in L:    ret += xprint(x)\n使用标准库中的itertools模块(By:dokelung)from itertools import chainlst = list(chain(*L))这种方法由标准库提供,显然是更有效率,更加简洁的.\n注: * 操作符是起到一个参数列表解包的作用\n有没有一种更加Pythonic的方法,但又不使用标准库?答案是当然有,我们可以利用 List Comprehension 这个python中非常好用的技巧\nmyList = [x for j in L for x in j]\n总结三个解决方法中,方法1是最直接的方案, 方法2利用了已有的标准库,一般情况有更好的效率.\n方法3则是发挥Python的优点,毕竟Pythonic是每个Python程序员的目标,也是这个语言吸引人的地方.\n其实发这篇文章主要是顺带安利下Python, 一段Pythonic的代码具有很好的观赏性, Python也提供了很多Pythonic的特性.\n例如 上面提到的 LIst Comprehension 的方法来构造一个序列(列表,元组,字典), 其他语言要实现的话一般就要用lambda表达式,\n个人而言是排斥lambda表达式的, 可读性方面它不如直接定义函数,而且也缺少对称性的优美.\n再例如Python 的Slice(切片),也是一个很有用,很优美的技巧.\n最经典的字符串反转, python可以这样写\ns = “Hello, World!”print(s[::-1]) # 具体解释可以看python文档,这里利用的是使步长为-1间隔抽样可以这样写\nL = [1,2,3,4,5……..]print(L[::3]) #3 为步进长度,可以取出1,4,7….\n","tags":[],"path":"2018/06/15/list merge/","external_link":""},{"title":"","date":"2018-06-15T09:41:58.791Z","content":"conda install -c menpo opencv3=3.2.0\nhttps://www.cnblogs.com/arkenstone/p/6490017.html\n","tags":[],"path":"2018/06/15/opencv install/","external_link":""},{"title":"","date":"2018-06-15T09:41:58.791Z","content":" 12if aim_row is not np.nan:       print(aim_row)","tags":[],"path":"2018/06/15/python Nan空值/","external_link":""},{"title":"","date":"2018-06-15T09:41:58.791Z","content":"一.以文件名查找： \n\nfind 命令 \n\n由于find具有强大的功能，所以它的选项也很多，其中大部分选项都值得我们花时间来了解一下。即使系统中含有网络文件系统( NFS)，find命令在该文件系统中同样有效，只你具有相应的权限。在运行一个非常消耗资源的find命令时，很多人都倾向于把它放在后台执行，因为遍历一个大的文件系统可能会花费很长的时间(这里是指30G字节以上的文件系统)。find命令的一般形式为；find pathname -options [-print -exec -ok …]如find / -name “filename”目的：在根目录“/”开始搜被称为filename的文件，“filename”文件名可以包含通配符（*，？），注意：filename是文件名字符串，可以带双引号，也可不带find命令功能强大，它有很多选项让你以不同的方式搜索文件，例如，通过日期，文件大小，权限，拥有者等等。find命令的参数；pathname: find命令所查找的目录路径。例如用.来表示当前目录，用/来表示系统根目录。-print： find命令将匹配的文件输出到标准输出。-exec： find命令对匹配的文件执行该参数所给出的shell命令。相应命令的形式为’command’ { } ;，注意{ }和；之间的空格。-ok： 和-exec的作用相同，只不过以一种更为安全的模式来执行该参数所给出的shell命令，在执行每一个命令之前，都会给出提示，让用户来确定是否执行。 \n3、find命令选项 \n-name按照文件名查找文件。-perm按照文件权限来查找文件。-prune使用这一选项可以使find命令不在当前指定的目录中查找，如果同时使用-depth选项，那么-prune将被find命令忽略。-user按照文件属主来查找文件。-group按照文件所属的组来查找文件。-mtime -n +n按照文件的更改时间来查找文件， - n表示文件更改时间距现在n天以内，+ n表示文件更改时间距现在n天以前。find命令还有-atime和-ctime 选项，但它们都和-m time选项。-nogroup查找无有效所属组的文件，即该文件所属的组在/etc/groups中不存在。-nouser查找无有效属主的文件，即该文件的属主在/etc/passwd中不存在。-newer file1 ! file2查找更改时间比文件file1新但比文件file2旧的文件。-type查找某一类型的文件，诸如：b - 块设备文件。d - 目录。c - 字符设备文件。p - 管道文件。l - 符号链接文件。f - 普通文件。-size n：[c] 查找文件长度为n块的文件，带有c时表示文件长度以字节计。-depth：在查找文件时，首先查找当前目录中的文件，然后再在其子目录中查找。-fstype：查找位于某一类型文件系统中的文件，这些文件系统类型通常可以在配置文件/etc/fstab中找到，该配置文件中包含了本系统中有关文件系统的信息。-mount：在查找文件时不跨越文件系统mount点。-follow：如果find命令遇到符号链接文件，就跟踪至链接所指向的文件。-cpio：对匹配的文件使用cpio命令，将这些文件备份到磁带设备中。 \n\nlocate 命令 \n\nlocate filenamelocate命令其实是“find -name”的另一种写法，但是要比后者快得多，原因在于它不搜索具体目录，而是搜索一个数据库（/var/lib/locatedb），这个数据库中含有本地所有文件信息。Linux系统自动创建这个数据库，并且每天自动更新一次，所以使用locate命令查不到最新变动过的文件。为了避免这种情况，可以在使用locate之前，先使用updatedb命令，手动更新数据库。locate命令的使用实例：　　 locate -i ~/m搜索用户主目录下，所有以m开头的文件，并且忽略大小写。 \n发现包含字符串“filename”的文件名。这比find命令更容易。但是基于数据库（通常在夜间重建），所以你无法找到刚刚存到文件系统的文件。为了强制立即更新数据库，作为超级用户可以使用：updatedb&amp; （中间没有空格） \n\nwhich命令 \n\nwhich executeable_name查找可执行文件，根据可执行文件的文件名。例如 which apache2 ， 返回/usr/sbin/apache2 \n二.以文件内容查找 \n\ngrep -n 字符串名字 /filepath/filename返回包含该字符串的该行，可以是多行。且包含行数。 \nsudo gedit /filepath/filename而后，用ctrl+F 去查找相应的字符串。 \nvi或者less命令可以查找相应的内容例如 vi /filepath/filename而后，输入 “/字符串” ，按下字母“n”到下一个匹配的字符串 \ntail命令 \n\n查看文件内容的特殊方法\n\n如果你只想看文件的前5行，可以使用head命令，如：head -5 /etc/passwd \n如果你想查看文件的后10行，可以使用tail命令，如：tail -20 /etc/passwdtail -f /var/log/messages参数-f使tail不停地去读最新的内容，这样有实时监视的效果tail -f /var/log/messages按Ctrl+C后，直接从脚本退出到提示符下了\n\n","tags":[],"path":"2018/06/15/search file/","external_link":""},{"title":"","date":"2018-06-15T09:41:58.791Z","content":"有2种方式解决问题：\n\n通过unzip行命令解压，指定字符集unzip -O CP936 xxx.zip (用GBK, GB18030也可以)有趣的是unzip的manual中并无这个选项的说明, unzip –help对这个参数有一行简单的说明。\n\n在环境变量中，指定unzip参数，总是以指定的字符集显示和解压文件/etc/environment中加入2行UNZIP=”-O CP936”ZIPINFO=”-O CP936”这样Gnome桌面的归档文件管理器(file-roller)可以正常使用unzip解压中文，但是file-roller本身并不能设置编码传递给unzip。\n\n\n","tags":[],"path":"2018/06/15/win文件解压到linux乱码问题/","external_link":""}]';
+	s = s.replace(/\\n/g, "\\n")
+               .replace(/\\'/g, "\\'")
+               .replace(/\\"/g, '\\"')
+               .replace(/\\&/g, "\\&")
+               .replace(/\\r/g, "\\r")
+               .replace(/\\t/g, "\\t")
+               .replace(/\\b/g, "\\b")
+               .replace(/\\f/g, "\\f")
+// remove non-printable and other non-valid JSON chars
+	s = s.replace(/[\u0000-\u0019]+/g,"");
+	var list = JSON.parse(s);
+	var fuse = new Fuse(list, options);
+	var el = document.getElementById('search-form');
+	var newBox = $('.Card-archive').first().clone();
+	el.oninput = function(event){
+		var searchText = el.value;
+		var result = fuse.search(searchText);
+		$('.archive-cards .Card-archive').remove();
+		for(var i in result){
+			var anotherBox = newBox.clone();
+			var dateStr = new Date(result[i].date);
+			anotherBox.css('display','flex');
+			var url = "";
+			if(result[i].external_link !== ""){
+				url = result[i].external_link;
+			}else{
+				url = '/' + result[i].path;
+			}
+
+			anotherBox.find('.Card-title a').text(result[i].title).attr('href', url);
+			anotherBox.find('.Card-date').text(dateStr.toDateString());
+			anotherBox.appendTo('.archive-cards');
+		}
+	}
+</script>
+
+<div class='tagcloud-container'>
+<div class='tag-cloud'>
+	
+</div>
+</div>
+
+  </div>
+
+  
+
+<footer id='footer'>
+    <div class='footer-copyright'>
+        <div>
+            <p> Copyright by <a href="">John Doe </a> @ 2018</p>
+            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> and <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; Theme: <a href="https://qutang.github.io/cutie/">Cutie 2.0.13-Taurus</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
+        </div>
+    </div>
+    
+    <div class='footer-social'>
+        
+    </div>
+</footer>
+
+  <br>
+
+  <div id="footer-nav" class='footer-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon active_dot'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+		
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+
+  
+
+
+
+    
+
+
+
+
+
+
+
+    <script src="/js/lightgallery.min.js"></script>
+<script src="/js/lg-zoom.min.js"></script>
+<script type='text/javascript'>
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+        $(".article-content img").each(function(){
+            console.log($(this).attr('src'))
+            $(this).attr('data-src', $(this).attr('src')).lightGallery({
+                selector: 'this'
+            })
+        });
+    });
+</script>
+
+
+
+
+
+
+<script type='text/javascript'>
+
+  
+</script>
+
+
+
+<!-- <script src="/js/post.js"></script> -->
+
+<script src="/js/headroom.min.js"></script>
+
+<script data-no-instant type='text/javascript'>
+
+initHeadroom();
+
+changeLayoutOnTouchScreen();
+
+// 
+</script>
+
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
