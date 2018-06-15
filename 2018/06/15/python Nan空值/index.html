@@ -1,565 +1,574 @@
 <!DOCTYPE html>
-<html lang="en">
 
 
 
 
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
   
-      <title>No title - Borg's Home</title>
+
+
+
+
+  <meta name="description" content="12if aim_row is not np.nan:       print(aim_row)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Borg&#39;s Home">
+<meta property="og:url" content="http://yoursite.com/2018/06/15/python Nan空值/index.html">
+<meta property="og:site_name" content="Borg&#39;s Home">
+<meta property="og:description" content="12if aim_row is not np.nan:       print(aim_row)">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-06-15T09:41:43.463Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Borg&#39;s Home">
+<meta name="twitter:description" content="12if aim_row is not np.nan:       print(aim_row)">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/06/15/python Nan空值/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title> | Borg's Home</title>
   
 
-  
-  
-  <meta name="description" content="">
-  <meta name="author" content="Borg">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- load loadjs.js -->
-  <script src="/libs/loadjs/dist/loadjs.min.js"></script>
-
-
-<link rel="stylesheet" href="/libs/animate.css/animate.min.css">
-  <!-- load lightgallery -->
-<link rel="stylesheet" href="/css/lightgallery.css">
-<link rel="stylesheet" href="/libs/noty/lib/noty.css">
-<script
-src="https://code.jquery.com/jquery-3.3.1.min.js"
-integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-crossorigin="anonymous"></script>
-  
 
 
 
 
 
 
-    <link rel="stylesheet" href="/css/taurus.css">
-    
-        <link rel="stylesheet" href="/css/scheme-taurus/animations.css">
-    
 
 
- 
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
-  <!-- load font awesome 5 -->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
-  <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-  });
-  </script>
-  <!-- load mathjax -->
-  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax//libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
-  <!-- load js-cookie -->
-  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <script src="/js/social-share.min.js"></script>
-    <script src="/js/theme.js"></script>
-
-  <!-- include cookie.js -->
-  
-  
-
-  <!-- include comment system code -->
-  
-    <script src="//cdn1.lncld.net/static/js/3.6.4/av-min.js"></script>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-  
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
-<body style="display: flex; flex-direction: column; min-height: 100vh;">
 
- 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-<header id="header" class='header'>
-	<div class="header-title">
-		
-		<div class='header-logo'>
-			<a href='/'>
-				<img src='/images/theme-icon.svg' />
-			</a>
-		</div>
-		<div class='header-text'>
-			<h1>
-				<a href="/">Borg's Home</a>
-			</h1>
-			<subtitle>
-				不忘初心
-			</subtitle>
-		</div>
-		
-	</div>
-	<div id='header-nav'>
-		
+  
+  
+    
+  
 
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
 
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-<nav id="nav">
-	
-	
-		
-			
-		
-		
-			<div class='nav-item'>
-				
-					<div class="nav-name">
-				
-					<a class='nav-link' href="function link() { [native code] }">
-						<span>home </span>
-					</a>
-				</div>
-			</div>
-		
-	
-		
-			
-		
-		
-			<div class='nav-item'>
-				
-					<div class="nav-name">
-				
-					<a class='nav-link' href="function link() { [native code] }">
-						<span>archives </span>
-					</a>
-				</div>
-			</div>
-		
-	
-		
-			
-		
-		
-			<div class='nav-item'>
-				
-					<div class="nav-name">
-				
-					<a class='nav-link' href="function link() { [native code] }">
-						<span>tags </span>
-					</a>
-				</div>
-			</div>
-		
-	
-	
-	<div class='nav-item' id='nav-item-toc'>
-		
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Borg's Home</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">不忘初心</p>
+      
+    
+  </div>
 
-
-
-<div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
-    <img src="/images/icons/blue-shadow/toc.svg" alt="">
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
-	</div>
-	
-	<div class='nav-item' id='nav-item-archive'>
-		
-				<div class='nav-icon'>
-				
-			<a href="/archives/" title='Archives'>
-			<img src="/images/icons/blue-shadow/archive.svg" alt="">
-			</a>
-		</div>
-	</div>
-	<div class='nav-item' id='nav-item-search'>
-		
-		<div class='nav-icon'>
-		
-			<a href="/search/" title='Search'>
-			<img src="/images/icons/blue-shadow/search.svg" alt="">
-			</a>
-		</div>
-	</div>
-	<div class="nav-item" id='nav-item-more'>
-		<div class="nav-icon">
-				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
-				<img src="/images/icons/blue-shadow/menu.svg" alt="">
-				</a>
-		</div>
-		<div class="nav-more-menu">
-		
-			
-			
-		
-			<div class='nav-more-item'>
-					<div class="nav-name">
-						<a class='nav-link' href="function link() { [native code] }">
-							<span>Home</span>
-						</a>
-					</div>
-			</div>
-		
-		
-			
-			
-		
-			<div class='nav-more-item'>
-					<div class="nav-name">
-						<a class='nav-link' href="function link() { [native code] }">
-							<span>Archives</span>
-						</a>
-					</div>
-			</div>
-		
-		
-			
-			
-		
-			<div class='nav-more-item'>
-					<div class="nav-name">
-						<a class='nav-link' href="function link() { [native code] }">
-							<span>Tags</span>
-						</a>
-					</div>
-			</div>
-		
-		
-		
-	</div>
-	</div>
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
 </nav>
 
-	</div>
-</header>
 
- 
 
   
 
 
 
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div style="flex: 1;">
-      <style>
-    body {
-        background-color: white;
-    }
-</style>
-
-
-
-
-
-
-
+</div>
+    </header>
 
     
-    
 
 
-
-
-
-
-    
-    
-        
-    
-
-    
-        
-    
-
-
-
-
-
-
-
-
-
-<article class="article" id="/2018/06/15/python Nan空值/" data-name='' data-version="">
-
-    <!-- Title -->
-    <div class='article-header'>
-         
-         <h1 class='article-title'>
-            <a href="/2018/06/15/python Nan空值/">
-                No title
-            </a>
-        </h1>
-        <!-- TODO: support nested categories,display them nicely -->
-        
-    </div>
-    
-    <!-- Date and Author -->
-    <div class='article-meta'>
-    <ul>
-            <li><i class='fa fa-calendar'></i> 2018-06-15</li>
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
             
-            <li><i class="fa fa-user"></i> Borg</li>
-            <li><i class="fas fa-copyright"></i>
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/15/python Nan空值/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Borg">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Borg's Home">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+              
             
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
                 
-                
+              
+
+              <time title="创建时间：2018-06-15 18:27:17 / 修改时间：17:41:43" itemprop="dateCreated datePublished" datetime="2018-06-15T18:27:17+08:00">2018-06-15</time>
             
+
             
-                <a href=https://creativecommons.org/licenses/by-nc-nd/4.0/>CC BY-NC-ND 4.0</a>
+              
+
+              
             
-            </li>
-    </ul>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
     
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+         <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if aim_row is not np.nan:</span><br><span class="line">       print(aim_row)</span><br></pre></td></tr></table></figure>
+      
     </div>
-    <div class='article-cards'>
-        <!-- Author Card -->
-        <!---
-        <div class='Card-article Card-author'>
-            <div class='card-title'>
-                <h3></h3>
-            </div>
-            <div class='card-content'>
-                    <div class="author-meta">
-                            <div class='author-figure'>
-                                <img src="" alt="">
-                            </div>
-                            <div class='author-name'>
-                                Borg
-                            </div>
-                        </div>
-                        <div class="author-ai">
-                            <div class='author-intro'>
-                                <!-- TODO: auto generating author description -->
-                                <!-- 
-                            </div>
-                            <div class="author-articles">
-                                <!-- TODO: auto generating author articles -->
-                                <!-- <ul>
-                                    <li>Article 1</li>
-                                    <li>Article 2</li>
-                                    <li>Article 3</li>
-                                    <li>Article 4</li>
-                                    <li>Article 5</li>
-                                    <li>Article 6</li>
-                                </ul>
-                            </div>
-                        </div>
-            </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-        </div> -->
-
-        <!-- Visit Card -->
-        <!-- <div class="Card-article Card-visit"> -->
-            <!-- <div class="card-title">
-  <h3>Post Visit</h3>
-</div>
-<div class="card-chart">
-  <div id='chart-post-visit'></div>
-</div> -->
-        <!-- </div> -->
-        
-        <!-- Auto Excerpt Card -->
-        <!-- <div class="Card-article Card-excerpt">
-            <div class="card-title">
-  <h3>Quick Read</h3>
-</div>
-<div class="card-text">
-  <p id='text-post-summary'>12if aim_row is not np.nan:       print(aim_row)</p>
-</div>
-        </div> -->
-    </div>
-    
-    <!-- Gallery -->
-    <!-- TODO: add a slider to gallery -->
-    
-
-    <!-- Content -->
-    <!-- TODO: support table of content -->
-    <div class="article-toc" id='article-toc'>
-        
-
-
-
-<div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
-    <img src="/images/icons/blue-shadow/toc.svg" alt="">
-</div>
-
-    </div>
-    <div class='article-content'>
-     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if aim_row is not np.nan:</span><br><span class="line">       print(aim_row)</span><br></pre></td></tr></table></figure>
-    
-    </div>
-    
-    
-        <div class="article-comment" id='article-comment'>
+              <a href="/2018/06/15/search file/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
             
+          </div>
 
-<h1>Comment</h1>
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/15/opencv install/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
 
   
-    <div id="comment-not-available">
-      Not available
-      <p><strong>For site maintainer: Please provide <code>appId</code> and <code>appKey</code> in your <code>_data/cutie.yml</code> file for <code>valine</code> comment system.</strong></p>
-    </div>
-  
+
 
 
         </div>
         
-</article>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Borg</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Borg</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.3.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
   </div>
 
   
 
-<footer id='footer'>
-    <div class='footer-copyright'>
-        <div>
-            <p> Copyright by <a href="">Borg </a> @ 2018</p>
-            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> and <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; Theme: <a href="https://qutang.github.io/cutie/">Cutie 2.0.13-Taurus</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
-        </div>
-    </div>
-    
-    <div class='footer-social'>
-        
-    </div>
-</footer>
-
-  <br>
-
-  <div id="footer-nav" class='footer-nav'>
-		
-
-
-
-<nav id="nav">
-	
-	
-		
-			
-				
-			
-		
-		
-	
-		
-			
-		
-		
-	
-		
-			
-		
-		
-	
-	
-	<div class='nav-item' id='nav-item-toc'>
-		
-
-
-
-<div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
-    <img src="/images/icons/blue-shadow/toc.svg" alt="">
-</div>
-
-	</div>
-	
-	<div class='nav-item' id='nav-item-archive'>
-		
-				<div class='nav-icon'>
-				
-			<a href="/archives/" title='Archives'>
-			<img src="/images/icons/blue-shadow/archive.svg" alt="">
-			</a>
-		</div>
-	</div>
-	<div class='nav-item' id='nav-item-search'>
-		
-		<div class='nav-icon'>
-		
-			<a href="/search/" title='Search'>
-			<img src="/images/icons/blue-shadow/search.svg" alt="">
-			</a>
-		</div>
-	</div>
-	<div class="nav-item" id='nav-item-more'>
-		<div class="nav-icon">
-				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
-				<img src="/images/icons/blue-shadow/menu.svg" alt="">
-				</a>
-		</div>
-		<div class="nav-more-menu">
-		
-			
-			
-		
-			<div class='nav-more-item'>
-					<div class="nav-name">
-						<a class='nav-link' href="function link() { [native code] }">
-							<span>Home</span>
-						</a>
-					</div>
-			</div>
-		
-		
-			
-			
-		
-			<div class='nav-more-item'>
-					<div class="nav-name">
-						<a class='nav-link' href="function link() { [native code] }">
-							<span>Archives</span>
-						</a>
-					</div>
-			</div>
-		
-		
-			
-			
-		
-			<div class='nav-more-item'>
-					<div class="nav-name">
-						<a class='nav-link' href="function link() { [native code] }">
-							<span>Tags</span>
-						</a>
-					</div>
-			</div>
-		
-		
-		
-	</div>
-	</div>
-</nav>
-
-	</div>
-
-  
-
-
-
-    
-
-
-
-
-
-
-
-    <script src="/js/lightgallery.min.js"></script>
-<script src="/js/lg-zoom.min.js"></script>
-<script type='text/javascript'>
-    $(document).ready(function() {
-        $("#lightgallery").lightGallery(); 
-        $(".article-content img").each(function(){
-            console.log($(this).attr('src'))
-            $(this).attr('data-src', $(this).attr('src')).lightGallery({
-                selector: 'this'
-            })
-        });
-    });
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
 
@@ -567,46 +576,120 @@ crossorigin="anonymous"></script>
 
 
 
-<script type='text/javascript'>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
-  // update cookie if this page is opened (directly)
-  loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
-  loadjs.ready('post-version', function(){
-    
-    new Postv2('hashit_a9b7ef9b504a80242ad7a7721a326a7eef0e75c328385ba678567ab946401c54').update('hashit_9ca89e4d890e5b199a32f2e844c68c8c1ce95ee99f9aa9eed4c0f57fc09432f2', function(){});
-  });
   
-</script>
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
 
 
 
-<!-- <script src="/js/post.js"></script> -->
+  
+  
 
-<script src="/js/headroom.min.js"></script>
-
-<script data-no-instant type='text/javascript'>
-
-initHeadroom();
-
-changeLayoutOnTouchScreen();
-
-// 
-// var post = new Post('', '');
-// post.getCommentCount(window.location.pathname, function(count){
-//     $('#article-comment-count').text(count);
-// });
-// post.addVisitRecord(window.location.pathname, userip);
-// post.getVisitCount(window.location.pathname, function(count){
-//     $('#article-visit-count').text(count);
-// });
-
-// 
-</script>
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
 
 
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>

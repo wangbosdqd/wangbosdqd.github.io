@@ -1,646 +1,752 @@
 <!DOCTYPE html>
-<html lang="en">
 
 
 
 
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
   
-      <title>Archive - Borg's Home</title>
+
+
+
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Borg&#39;s Home">
+<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:site_name" content="Borg&#39;s Home">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Borg&#39;s Home">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/archives/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>归档 | Borg's Home</title>
   
 
-  
-  
-  <meta name="description" content="">
-  <meta name="author" content="Borg">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- load loadjs.js -->
-  <script src="/libs/loadjs/dist/loadjs.min.js"></script>
-
-
-<link rel="stylesheet" href="/libs/animate.css/animate.min.css">
-  <!-- load lightgallery -->
-<link rel="stylesheet" href="/css/lightgallery.css">
-<link rel="stylesheet" href="/libs/noty/lib/noty.css">
-<script
-src="https://code.jquery.com/jquery-3.3.1.min.js"
-integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-crossorigin="anonymous"></script>
-  
 
 
 
 
 
 
-    <link rel="stylesheet" href="/css/taurus.css">
-    
-        <link rel="stylesheet" href="/css/scheme-taurus/animations.css">
-    
 
 
- 
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
-  <!-- load font awesome 5 -->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
-  <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-  });
-  </script>
-  <!-- load mathjax -->
-  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax//libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
-  <!-- load js-cookie -->
-  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <script src="/js/social-share.min.js"></script>
-    <script src="/js/theme.js"></script>
-
-  <!-- include cookie.js -->
-  
-  
-
-  <!-- include comment system code -->
-  
-    <script src="//cdn1.lncld.net/static/js/3.6.4/av-min.js"></script>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-  
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
-<body style="display: flex; flex-direction: column; min-height: 100vh;">
 
- 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-<header id="header" class='header'>
-	<div class="header-title">
-		
-		<div class='header-logo'>
-			<a href='/'>
-				<img src='/images/theme-icon.svg' />
-			</a>
-		</div>
-		<div class='header-text'>
-			<h1>
-				<a href="/">Borg's Home</a>
-			</h1>
-			<subtitle>
-				不忘初心
-			</subtitle>
-		</div>
-		
-	</div>
-	<div id='header-nav'>
-		
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-archive">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Borg's Home</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">不忘初心</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
 
 
 
-<nav id="nav">
-	
-	
-		
-			
-		
-		
-			<div class='nav-item'>
-				
-					<div class="nav-name">
-				
-					<a class='nav-link' href="function link() { [native code] }">
-						<span>home </span>
-					</a>
-				</div>
-			</div>
-		
-	
-		
-			
-		
-		
-			<div class='nav-item'>
-				
-					<div class="nav-name">
-				
-					<a class='nav-link' href="function link() { [native code] }">
-						<span>archives </span>
-					</a>
-				</div>
-			</div>
-		
-	
-		
-			
-		
-		
-			<div class='nav-item'>
-				
-					<div class="nav-name">
-				
-					<a class='nav-link' href="function link() { [native code] }">
-						<span>tags </span>
-					</a>
-				</div>
-			</div>
-		
-	
-	
-	<div class='nav-item' id='nav-item-archive'>
-		
-				<div class='nav-icon active_dot'>
-				
-			<a href="/archives/" title='Archives'>
-			<img src="/images/icons/blue-shadow/archive.svg" alt="">
-			</a>
-		</div>
-	</div>
-	<div class='nav-item' id='nav-item-search'>
-		
-		<div class='nav-icon'>
-		
-			<a href="/search/" title='Search'>
-			<img src="/images/icons/blue-shadow/search.svg" alt="">
-			</a>
-		</div>
-	</div>
-	<div class="nav-item" id='nav-item-more'>
-		<div class="nav-icon">
-				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
-				<img src="/images/icons/blue-shadow/menu.svg" alt="">
-				</a>
-		</div>
-		<div class="nav-more-menu">
-		
-			
-			
-		
-			<div class='nav-more-item'>
-					<div class="nav-name">
-						<a class='nav-link' href="function link() { [native code] }">
-							<span>Home</span>
-						</a>
-					</div>
-			</div>
-		
-		
-			
-			
-		
-			<div class='nav-more-item'>
-					<div class="nav-name">
-						<a class='nav-link' href="function link() { [native code] }">
-							<span>Archives</span>
-						</a>
-					</div>
-			</div>
-		
-		
-			
-			
-		
-			<div class='nav-more-item'>
-					<div class="nav-name">
-						<a class='nav-link' href="function link() { [native code] }">
-							<span>Tags</span>
-						</a>
-					</div>
-			</div>
-		
-		
-		
-	</div>
-	</div>
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives menu-item-active">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+    
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
+  
+
+  
 </nav>
 
-	</div>
-</header>
 
- 
 
+  
 
 
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div style="flex: 1;">
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <span class="archive-move-on"></span>
+
       
-	
-	<div class='archive-container'>
-		
-			<h1 class='archive-title'>2018</h1>
-			
-			
-			
-				
+      <span class="archive-page-counter">
+        
+        
+        
+          
+        
+        嗯..! 目前共计 8 篇日志。 继续努力。
+      </span>
+      
 
-	
-		<h2 class='archive-title'></h2>
-	
-	<div class="archive-cards">
-	
-		
+      
+
+        
+        
+        
+
+        
+          
+          <div class="collection-title">
+            <h1 class="archive-year" id="archive-year-2018">2018</h1>
+          </div>
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/06/15/SSH远程连接Ubuntu 传输文件/" itemprop="url">
+              
+                <span itemprop="name">未命名</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-06-15T18:27:17+08:00"
+              content="2018-06-15" >
+          06-15
+        </time>
+      </div>
+
+    </header>
+  </article>
 
 
 
+      
 
-<div class='Card-archive' id='hashit_8eaedc14878e08b6588741aa79f1a7745ee8c2595058d97b43275325433a2a85' data-name='' data-version=''>
-	<mark class='Card-badge'></mark>
-	<div class="Card-body">
-		<h3 class='Card-title'>
-			
-				<a href="/2018/06/15/SSH远程连接Ubuntu 传输文件/">
-			
-			No title</a>
-		</h3>
-		<div class="Card-meta">
-			<div class='Card-tags'></div>
-			<ul>
-					<li>
-						<a href="/archives/">
-							<i class='fa fa-calendar'></i> 2018-06-15
-						</a>
-					</li>
-					
-					
-					
-			</ul>
-		</div>
-	</div>
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/06/15/VS for Ubuntu install/" itemprop="url">
+              
+                <span itemprop="name">未命名</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-06-15T18:27:17+08:00"
+              content="2018-06-15" >
+          06-15
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/06/15/conda环境管理/" itemprop="url">
+              
+                <span itemprop="name">未命名</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-06-15T18:27:17+08:00"
+              content="2018-06-15" >
+          06-15
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/06/15/list merge/" itemprop="url">
+              
+                <span itemprop="name">未命名</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-06-15T18:27:17+08:00"
+              content="2018-06-15" >
+          06-15
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/06/15/opencv install/" itemprop="url">
+              
+                <span itemprop="name">未命名</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-06-15T18:27:17+08:00"
+              content="2018-06-15" >
+          06-15
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/06/15/python Nan空值/" itemprop="url">
+              
+                <span itemprop="name">未命名</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-06-15T18:27:17+08:00"
+              content="2018-06-15" >
+          06-15
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/06/15/search file/" itemprop="url">
+              
+                <span itemprop="name">未命名</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-06-15T18:27:17+08:00"
+              content="2018-06-15" >
+          06-15
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/06/15/win文件解压到linux乱码问题/" itemprop="url">
+              
+                <span itemprop="name">未命名</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-06-15T18:27:17+08:00"
+              content="2018-06-15" >
+          06-15
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+    </div>
+  </div>
+  
+  
+  
+
+  
+
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Borg</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Borg</span>
+
+  
+
+  
 </div>
 
-	
-		
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.3.0</div>
 
 
 
 
-<div class='Card-archive' id='hashit_806012134fb4f3ef25bdd2e1042e6f62f9a8409eb891f5a3af4d7987b1bbbfec' data-name='' data-version=''>
-	<mark class='Card-badge'></mark>
-	<div class="Card-body">
-		<h3 class='Card-title'>
-			
-				<a href="/2018/06/15/VS for Ubuntu install/">
-			
-			No title</a>
-		</h3>
-		<div class="Card-meta">
-			<div class='Card-tags'></div>
-			<ul>
-					<li>
-						<a href="/archives/">
-							<i class='fa fa-calendar'></i> 2018-06-15
-						</a>
-					</li>
-					
-					
-					
-			</ul>
-		</div>
-	</div>
-</div>
-
-	
-		
+        
 
 
 
 
-<div class='Card-archive' id='hashit_80b11e6cd8ae097c24696c56322a62a742440f6b185cab54d9485a289b2447fc' data-name='' data-version=''>
-	<mark class='Card-badge'></mark>
-	<div class="Card-body">
-		<h3 class='Card-title'>
-			
-				<a href="/2018/06/15/conda环境管理/">
-			
-			No title</a>
-		</h3>
-		<div class="Card-meta">
-			<div class='Card-tags'></div>
-			<ul>
-					<li>
-						<a href="/archives/">
-							<i class='fa fa-calendar'></i> 2018-06-15
-						</a>
-					</li>
-					
-					
-					
-			</ul>
-		</div>
-	</div>
-</div>
-
-	
-		
 
 
 
 
-<div class='Card-archive' id='hashit_2ca91c28ef91bf896fd47b75b9fabc0ebbca309daa0a9173bf1c8c4cb7f45f59' data-name='' data-version=''>
-	<mark class='Card-badge'></mark>
-	<div class="Card-body">
-		<h3 class='Card-title'>
-			
-				<a href="/2018/06/15/list merge/">
-			
-			No title</a>
-		</h3>
-		<div class="Card-meta">
-			<div class='Card-tags'></div>
-			<ul>
-					<li>
-						<a href="/archives/">
-							<i class='fa fa-calendar'></i> 2018-06-15
-						</a>
-					</li>
-					
-					
-					
-			</ul>
-		</div>
-	</div>
-</div>
+        
+      </div>
+    </footer>
 
-	
-		
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
 
-
-
-
-<div class='Card-archive' id='hashit_e9d333094a9f230c63ee666525caf8443e1c1d44552db6ef9daf3196029c048b' data-name='' data-version=''>
-	<mark class='Card-badge'></mark>
-	<div class="Card-body">
-		<h3 class='Card-title'>
-			
-				<a href="/2018/06/15/opencv install/">
-			
-			No title</a>
-		</h3>
-		<div class="Card-meta">
-			<div class='Card-tags'></div>
-			<ul>
-					<li>
-						<a href="/archives/">
-							<i class='fa fa-calendar'></i> 2018-06-15
-						</a>
-					</li>
-					
-					
-					
-			</ul>
-		</div>
-	</div>
-</div>
-
-	
-		
-
-
-
-
-<div class='Card-archive' id='hashit_a9b7ef9b504a80242ad7a7721a326a7eef0e75c328385ba678567ab946401c54' data-name='' data-version=''>
-	<mark class='Card-badge'></mark>
-	<div class="Card-body">
-		<h3 class='Card-title'>
-			
-				<a href="/2018/06/15/python Nan空值/">
-			
-			No title</a>
-		</h3>
-		<div class="Card-meta">
-			<div class='Card-tags'></div>
-			<ul>
-					<li>
-						<a href="/archives/">
-							<i class='fa fa-calendar'></i> 2018-06-15
-						</a>
-					</li>
-					
-					
-					
-			</ul>
-		</div>
-	</div>
-</div>
-
-	
-		
-
-
-
-
-<div class='Card-archive' id='hashit_ed4bffcad7942ef85f173ae5abdb6af8cbb2d28f0ea9d2da2190ead275d10cb6' data-name='' data-version=''>
-	<mark class='Card-badge'></mark>
-	<div class="Card-body">
-		<h3 class='Card-title'>
-			
-				<a href="/2018/06/15/search file/">
-			
-			No title</a>
-		</h3>
-		<div class="Card-meta">
-			<div class='Card-tags'></div>
-			<ul>
-					<li>
-						<a href="/archives/">
-							<i class='fa fa-calendar'></i> 2018-06-15
-						</a>
-					</li>
-					
-					
-					
-			</ul>
-		</div>
-	</div>
-</div>
-
-	
-		
-
-
-
-
-<div class='Card-archive' id='hashit_ac3a3075b6ce7fdb5b2d0e17a43fba664119caa8ec6586a7b0d01a85861e8993' data-name='' data-version=''>
-	<mark class='Card-badge'></mark>
-	<div class="Card-body">
-		<h3 class='Card-title'>
-			
-				<a href="/2018/06/15/win文件解压到linux乱码问题/">
-			
-			No title</a>
-		</h3>
-		<div class="Card-meta">
-			<div class='Card-tags'></div>
-			<ul>
-					<li>
-						<a href="/archives/">
-							<i class='fa fa-calendar'></i> 2018-06-15
-						</a>
-					</li>
-					
-					
-					
-			</ul>
-		</div>
-	</div>
-</div>
-
-	
-	</div>
-
-
-			
-		
-	</div>
-	
+    
 
   </div>
 
   
 
-<footer id='footer'>
-    <div class='footer-copyright'>
-        <div>
-            <p> Copyright by <a href="">Borg </a> @ 2018</p>
-            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> and <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; Theme: <a href="https://qutang.github.io/cutie/">Cutie 2.0.13-Taurus</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
-        </div>
-    </div>
-    
-    <div class='footer-social'>
-        
-    </div>
-</footer>
-
-  <br>
-
-  <div id="footer-nav" class='footer-nav'>
-		
-
-
-
-<nav id="nav">
-	
-	
-		
-			
-				
-			
-		
-		
-	
-		
-			
-		
-		
-	
-		
-			
-		
-		
-	
-	
-	<div class='nav-item' id='nav-item-archive'>
-		
-				<div class='nav-icon active_dot'>
-				
-			<a href="/archives/" title='Archives'>
-			<img src="/images/icons/blue-shadow/archive.svg" alt="">
-			</a>
-		</div>
-	</div>
-	<div class='nav-item' id='nav-item-search'>
-		
-		<div class='nav-icon'>
-		
-			<a href="/search/" title='Search'>
-			<img src="/images/icons/blue-shadow/search.svg" alt="">
-			</a>
-		</div>
-	</div>
-	<div class="nav-item" id='nav-item-more'>
-		<div class="nav-icon">
-				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
-				<img src="/images/icons/blue-shadow/menu.svg" alt="">
-				</a>
-		</div>
-		<div class="nav-more-menu">
-		
-			
-			
-		
-			<div class='nav-more-item'>
-					<div class="nav-name">
-						<a class='nav-link' href="function link() { [native code] }">
-							<span>Home</span>
-						</a>
-					</div>
-			</div>
-		
-		
-			
-			
-		
-			<div class='nav-more-item'>
-					<div class="nav-name">
-						<a class='nav-link' href="function link() { [native code] }">
-							<span>Archives</span>
-						</a>
-					</div>
-			</div>
-		
-		
-			
-			
-		
-			<div class='nav-more-item'>
-					<div class="nav-name">
-						<a class='nav-link' href="function link() { [native code] }">
-							<span>Tags</span>
-						</a>
-					</div>
-			</div>
-		
-		
-		
-	</div>
-	</div>
-</nav>
-
-	</div>
-
-  
-
-
-
-    
-
-
-
-
-
-
-
-    <script src="/js/lightgallery.min.js"></script>
-<script src="/js/lg-zoom.min.js"></script>
-<script type='text/javascript'>
-    $(document).ready(function() {
-        $("#lightgallery").lightGallery(); 
-        $(".article-content img").each(function(){
-            console.log($(this).attr('src'))
-            $(this).attr('data-src', $(this).attr('src')).lightGallery({
-                selector: 'this'
-            })
-        });
-    });
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
 
@@ -648,115 +754,116 @@ crossorigin="anonymous"></script>
 
 
 
-<script type='text/javascript'>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
-    loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
-    loadjs.ready('post-version', {
-      success: function(){
-        console.log('ready to run badge script')
-        
-          
-          
-          
-            var postBadge = document.querySelector('#hashit_8eaedc14878e08b6588741aa79f1a7745ee8c2595058d97b43275325433a2a85 mark.Card-badge');
-            $(postBadge).fadeOut();
-            
-          
-        
-          
-          
-          
-            var postBadge = document.querySelector('#hashit_806012134fb4f3ef25bdd2e1042e6f62f9a8409eb891f5a3af4d7987b1bbbfec mark.Card-badge');
-            $(postBadge).fadeOut();
-            
-          
-        
-          
-          
-          
-            var postBadge = document.querySelector('#hashit_80b11e6cd8ae097c24696c56322a62a742440f6b185cab54d9485a289b2447fc mark.Card-badge');
-            $(postBadge).fadeOut();
-            
-          
-        
-          
-          
-          
-            var postBadge = document.querySelector('#hashit_2ca91c28ef91bf896fd47b75b9fabc0ebbca309daa0a9173bf1c8c4cb7f45f59 mark.Card-badge');
-            $(postBadge).fadeOut();
-            
-          
-        
-          
-          
-          
-            var postBadge = document.querySelector('#hashit_e9d333094a9f230c63ee666525caf8443e1c1d44552db6ef9daf3196029c048b mark.Card-badge');
-            $(postBadge).fadeOut();
-            
-          
-        
-          
-          
-          
-            var postBadge = document.querySelector('#hashit_a9b7ef9b504a80242ad7a7721a326a7eef0e75c328385ba678567ab946401c54 mark.Card-badge');
-            $(postBadge).fadeOut();
-            
-          
-        
-          
-          
-          
-            var postBadge = document.querySelector('#hashit_ed4bffcad7942ef85f173ae5abdb6af8cbb2d28f0ea9d2da2190ead275d10cb6 mark.Card-badge');
-            $(postBadge).fadeOut();
-            
-          
-        
-          
-          
-          
-            var postBadge = document.querySelector('#hashit_ac3a3075b6ce7fdb5b2d0e17a43fba664119caa8ec6586a7b0d01a85861e8993 mark.Card-badge');
-            $(postBadge).fadeOut();
-            
-          
-        
-      }
-    })
   
-</script>
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
 
 
 
-<!-- <script src="/js/post.js"></script> -->
+  
+  
 
-<script src="/js/headroom.min.js"></script>
+  
 
-<script data-no-instant type='text/javascript'>
+  
 
-initHeadroom();
 
-changeLayoutOnTouchScreen();
-
-// 
-// var post = new Post('', '');
-// $('.Card-archive').each(function(){
-//     var post_url = $(this).attr('id');
-//     var true_url = $(this).find('.Card-title a').first().attr('href');
-//     var card = this;
-//     post.getCommentCount(post_url, function(count){
-//         $(card).find('.card-comment-count').first().text(count);
-//     });
-//     post.getVisitCount(post_url, function(count){
-//         $(card).find('.card-visit-count').first().text(count);
-//     });
-    
-// });
-// 
-</script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
 
 
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
