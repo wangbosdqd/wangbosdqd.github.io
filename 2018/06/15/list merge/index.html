@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="问题: 倘若存在 L=[ [1,2,3],[4,5,6],[7,8,9]] 这样的列表,如何把合并成[1,2,3,4,5,6,7,8,9]呢? 最直接的方法(By:松林)ret = []for x in L:    ret += xprint(x) 使用标准库中的itertools模块(By:dokelung)from itertools import chainlst = list(chain(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/06/15/list merge/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="问题: 倘若存在 L=[ [1,2,3],[4,5,6],[7,8,9]] 这样的列表,如何把合并成[1,2,3,4,5,6,7,8,9]呢? 最直接的方法(By:松林)ret = []for x in L:    ret += xprint(x) 使用标准库中的itertools模块(By:dokelung)from itertools import chainlst = list(chain(">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-06-15T09:41:40.915Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="问题: 倘若存在 L=[ [1,2,3],[4,5,6],[7,8,9]] 这样的列表,如何把合并成[1,2,3,4,5,6,7,8,9]呢? 最直接的方法(By:松林)ret = []for x in L:    ret += xprint(x) 使用标准库中的itertools模块(By:dokelung)from itertools import chainlst = list(chain(">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-list merge" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/15/list merge/" class="article-date">
+  <time datetime="2018-06-15T09:41:58.791Z" itemprop="datePublished">2018-06-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>问题: 倘若存在 L=[ [1,2,3],[4,5,6],[7,8,9]] 这样的列表,如何把合并成[1,2,3,4,5,6,7,8,9]呢?</p>
+<p>最直接的方法(By:松林)<br>ret = []<br>for x in L:<br>    ret += x<br>print(x)</p>
+<p>使用标准库中的itertools模块(By:dokelung)<br>from itertools import chain<br>lst = list(chain(*L))<br>这种方法由标准库提供,显然是更有效率,更加简洁的.</p>
+<p>注: * 操作符是起到一个参数列表解包的作用</p>
+<p>有没有一种更加Pythonic的方法,但又不使用标准库?<br>答案是当然有,我们可以利用 List Comprehension 这个python中非常好用的技巧</p>
+<p>myList = [x for j in L for x in j]</p>
+<p>总结<br>三个解决方法中,方法1是最直接的方案, 方法2利用了已有的标准库,一般情况有更好的效率.</p>
+<p>方法3则是发挥Python的优点,毕竟Pythonic是每个Python程序员的目标,也是这个语言吸引人的地方.</p>
+<p>其实发这篇文章主要是顺带安利下Python, 一段Pythonic的代码具有很好的观赏性, Python也提供了很多Pythonic的特性.</p>
+<p>例如 上面提到的 LIst Comprehension 的方法来构造一个序列(列表,元组,字典), 其他语言要实现的话一般就要用lambda表达式,</p>
+<p>个人而言是排斥lambda表达式的, 可读性方面它不如直接定义函数,而且也缺少对称性的优美.</p>
+<p>再例如Python 的Slice(切片),也是一个很有用,很优美的技巧.</p>
+<p>最经典的字符串反转, python可以这样写</p>
+<p>s = “Hello, World!”<br>print(s[::-1]) # 具体解释可以看python文档,这里利用的是使步长为-1<br>间隔抽样可以这样写</p>
+<p>L = [1,2,3,4,5……..]<br>print(L[::3]) #3 为步进长度,可以取出1,4,7….</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/06/15/list merge/" data-id="cjifsbcqq00030ct1mbt6psyu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/06/15/conda环境管理/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/06/15/opencv install/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/06/15/SSH远程连接Ubuntu 传输文件/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/15/VS for Ubuntu install/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/15/conda环境管理/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/15/list merge/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/15/opencv install/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
